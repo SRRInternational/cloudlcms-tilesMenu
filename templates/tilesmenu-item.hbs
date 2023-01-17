@@ -3,13 +3,27 @@
         <div class="menu-item-title-inner h3" role="heading" aria-level="2" tabindex="0">{{#if _tilesMenu._customTitle}}{{{_tilesMenu._customTitle}}}{{else}}{{{compile displayTitle}}}{{/if}}</div>
     </div>
     <div class="menu-item-button">
-        <div aria-label="{{linkText}} {{#if _isVisited}}{{_globals._accessibility._ariaLabels.visited}}{{/if}}" class="{{#if _isVisited}}visited{{/if}} {{#if _isLocked}}disabled{{/if}} origbutton" {{#if _isLocked}}disabled="disabled"{{/if}}>
-             <span class="aria-label" role="region" tabindex="0">Click or tap View to start.</span>
-            <div class="viewtext" tabindex="0" role="button">{{{linkText}}}</div>{{{compile_a11y_text body}}}
-        </div>
-        {{#if duration}}
-            <span class="menu-item-duration" role="region" tabindex="0">{{#if _globals._menu._tilesmenu.durationLabel}}{{{_globals._menu._tilesmenu.durationLabel}}}{{/if}} {{{duration}}}</span>
-        {{/if}}
+        <a href="#/id/{{_id}}" class="menu-item-link {{#if _isVisited}}visited{{/if}}">
+            <div class="menu-item-graphic">
+                <img src="{{_graphic.src}}" alt="{{_graphic.alt}}">
+            </div>
+            <div class="menu-item-title">
+                <div class="menu-item-title-inner h3 accessible-text-block" role="heading" aria-level="2" tabindex="0">
+                    {{{compile displayTitle}}}</div>
+            </div>
+            <div class="menu-item-body">
+                <div class="menu-item-body-inner"><p>{{{compile_a11y_text body}}}</p></div>
+            </div>
+        </a>
+        <a href="#/id/{{_id}}" class="menu-item-link {{#if _isVisited}}visited{{/if}} {{#if _isLocked}}locked{{/if}}"
+            role="button" aria-label="{{displayTitle}}" {{#if
+            _isVisited}}{{_globals._accessibility._ariaLabels.visited}}{{/if}}
+            class="{{#if _isVisited}}visited{{/if}} {{#if _isLocked}}disabled{{/if}} accessible-text-block" {{#if
+            _isLocked}}disabled="disabled" {{/if}}>
+            {{{linkText}}}
+        </a>
+        {{#if duration}}<span class="menu-item-duration accessible-text-block" role="region" tabindex="0"> {{#if
+            durationLabel}}{{{_globals._menu._tilesmenu.durationLabel}}}{{/if}} {{{duration}}}</span>{{/if}}
     </div>
 
     <div class="page-level-progress-menu-item">
