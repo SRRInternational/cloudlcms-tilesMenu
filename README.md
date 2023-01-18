@@ -3,7 +3,7 @@
 **Scrolling Tiles Menu** is a *menu* that works with the [Adapt framework](https://github.com/adaptlearning/adapt_framework).  
 
 ### Custom css for cloudlcms-tiles theme 
-``` 
+```
 @font-color: #fff;
 @font-color-inverted: #ffffff;
 @heading-color: #fff;
@@ -33,6 +33,13 @@
 @background : #212121;
 @background-inverted: #4d4d4d;
 @shadow-inverted: #ffffff;
+.block{
+    background:@background;
+}
+
+.page,.menu-tile-items {
+    background: @background-inverted !important;
+}
 ```
 <img src="https://raw.githubusercontent.com/mike-st/adapt-tilesMenu/master/screenshot-tile.jpg" alt="IMAGE ALT TEXT HERE" width="768" height="389" border="10" />
 
