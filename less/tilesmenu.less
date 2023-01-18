@@ -859,13 +859,26 @@ html.accessibility .tilesmenu-menu .menu-item-button .origbutton .myPtag {
 	width: 60px;
 }
 
-/* 
-adding view href 
-*/
+/* pushing data inside hover*/
 @media only screen and (min-width: 520px) and (max-width: 759px),
 only screen and (min-width: 760px) {
 	.menu-item-button .menu-item-link {
 		width: 100%;
+
+		.menu-item-title,
+		.menu-item-body {
+			opacity: 0;
+			padding-left: 20px;
+			text-align: left;
+		}
+
+		.menu-item-title {
+			font-size: 21.56px;
+		}
+
+		.menu-item-body {
+			font-size: 17px;
+		}
 	}
 
 	.menu-item-link {
@@ -877,7 +890,6 @@ only screen and (min-width: 760px) {
 }
 
 /* css for tiles menu */
-
 .menu-item-link {
 	display: none;
 }
