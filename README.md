@@ -2,6 +2,38 @@
 
 **Scrolling Tiles Menu** is a *menu* that works with the [Adapt framework](https://github.com/adaptlearning/adapt_framework).  
 
+### Custom css for cloudlcms-tiles theme 
+``` 
+@font-color: #fff;
+@font-color-inverted: #ffffff;
+@heading-color: #fff;
+@heading-color-inverted: #212121;
+@item-color: #fff;
+@item-color-inverted: #ffffff;
+@visited-inverted: #ffffff;
+@btn-color: #4d4d4d;
+@btn-color-inverted: #ffffff;
+@disabled: #dddddd;
+@validation-success-inverted: #ffffff;
+@validation-error-inverted: #ffffff;
+@progress: #9096a0;
+@progress-inverted: #ffffff;
+@progress-border: #9096a0;
+@nav: #ffffff;
+@nav-inverted: #212121;
+@nav-progress: #68c68e;
+@nav-progress-hover: #68c68e;
+@nav-progress-inverted:#fff;
+@notify: #36cde8;
+@notify-inverted: #ffffff;
+@drawer:#212121;
+@drawer-inverted: #ffffff;
+@drawer-progress:#68c68e;
+@drawer-progress-hover:#68c68e;
+@background : #212121;
+@background-inverted: #4d4d4d;
+@shadow-inverted: #ffffff;
+```
 <img src="https://raw.githubusercontent.com/mike-st/adapt-tilesMenu/master/screenshot-tile.jpg" alt="IMAGE ALT TEXT HERE" width="768" height="389" border="10" />
 
 Menu choices are framed within a box element and arranged in a grid. **Scrolling Tiles Menu** allows you to direct the learner to either further menus (sub menus) or to one or more pages of content. The **Box Menu** default is show a title, an image, some body text, duration, a progress indicator and a link button.
