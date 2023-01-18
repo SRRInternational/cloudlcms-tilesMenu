@@ -898,5 +898,78 @@ only screen and (min-width: 760px) {
 	background-color: @background;
 }
 
+/* page level progressbar*/
+.nav__pagelevelprogress-btn {
+	margin: 0px;
+	padding: 24px;
+	float: right;
+	display: inline-block;
 
+	&:hover {
+		background-color: @background;
+	}
+}
+
+.nav .nav__pagelevelprogress-btn {
+	background-color: #fff;
+	border: none;
+	height: auto;
+	margin: 0;
+	padding: 2px 0;
+	top: 50px;
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	-ms-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+	width: 100%;
+
+	&:hover {
+		background-color: #fff !important;
+	}
+}
+
+@media only screen and (min-width: 760px) {
+	.nav .nav__pagelevelprogress-btn {
+		top: 60px;
+	}
+}
+
+.nav__inner .nav__pagelevelprogress-btn {
+	pointer-events: all;
+}
+
+.pagelevelprogress__indicator,
+.pagelevelprogress__indicator-inner {
+	width: 100%;
+	border-radius: 0px;
+	height: 15px;
+
+	.pagelevelprogress__indicator-bar {
+		height: 15px;
+		background-color: @nav-progress;
+		-webkit-border-radius: 0 0 0 0;
+		-moz-border-radius: 0 0 0 0;
+		-ms-border-radius: 0 0 0 0;
+		-o-border-radius: 0 0 0 0;
+		border-radius: 0 0 0 0;
+		background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, .1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .1) 50%, rgba(255, 255, 255, .1) 75%, transparent 75%, transparent);
+		background-image: linear-gradient(-45deg, rgba(255, 255, 255, .1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .1) 50%, rgba(255, 255, 255, .1) 75%, transparent 75%, transparent);
+		background-repeat: repeat-x;
+		background-size: 30px 30px;
+		-webkit-animation: none;
+		-moz-animation: none;
+		animation: none;
+		width: 0;
+		-webkit-transition: width 1s ease-out;
+		-moz-transition: width 1s ease-out;
+		-ms-transition: width 1s ease-out;
+		-o-transition: width 1s ease-out;
+		transition: width 1s ease-out;
+	}
+}
+
+/* drawer */
+.drawer__holder .pagelevelprogress__indicator {
+	width: 20%;
 }
