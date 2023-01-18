@@ -1,3 +1,8 @@
+@color0: @background;
+@width1: 100%;
+@height0: 100%;
+@height1: 60px;
+
 /* POSITIONING OF NAV ICONS */
 .location-menu {
 	overflow-y: hidden;
@@ -75,16 +80,16 @@
 				height: 100%;
 				text-align: left;
 				text-shadow: none !important;
-				background-color: @heading-color-inverted !important;
+				background-color: @background !important;
 				border: none;
 
 				.menu-title {
 					height: auto;
 					overflow: hidden;
 					position: absolute;
-					bottom: 44vh;
+					top: 20vh;
 					width: 80%;
-					font-size: 30px !important;
+					font-size: 40px !important;
 					line-height: 36px !important;
 					padding-bottom: 5px;
 					color: @heading-color !important;
@@ -104,7 +109,7 @@
 				}
 
 				.menu-body {
-					height: 43vh;
+					height: 60vh;
 					overflow-x: hidden;
 					overflow-y: auto;
 					position: absolute;
@@ -228,14 +233,14 @@
 				border: none;
 				border-radius: 0px;
 				width: auto;
-				height: 6px;
+				height: 4px;
 				margin: 0px 5px 0px 5px;
 				background-color: @progress;
 
 				.page-level-progress-menu-item-indicator-bar {
 					border-radius: 0px 5px 5px 0px;
 					background-color: @progress-inverted;
-					height: 6px;
+					height: 4px;
 				}
 
 				.page-level-progress-menu-item-indicator-bar[style="width:100%"] {
@@ -251,7 +256,6 @@
 
 	.menu-item-inner .menu-item-title {
 		margin: 0px !important;
-		padding: 0px !important;
 		opacity: 0.85;
 		bottom: 0;
 		position: absolute;
@@ -275,7 +279,7 @@
 	}
 
 	.menu-item-button {
-		background-color: #212121;
+		background-color: @color0;
 		padding: @menu-header-padding-hoz;
 		-webkit-transition: all .2s ease-in-out;
 		-moz-transition: all .2s ease-in-out;
@@ -412,6 +416,7 @@
 	}
 
 	.menu-item-duration {
+		display: none;
 		float: none;
 		text-shadow: 0px 0px 2px #ffffff;
 		background-color: rgba(255, 255, 255, 0.7);
@@ -443,7 +448,7 @@
 	font-family: inherit;
 	line-height: 32px;
 	bottom: 25px;
-	right: 29px;
+	right: 32px;
 }
 
 
@@ -831,7 +836,7 @@ html.accessibility .tilesmenu-menu .menu-item-button .origbutton .myPtag {
 
 		.menu-item-link {
 			display: block;
-			color: white;
+			color: @font-color;
 		}
 
 		.menu-item-button+.page-level-progress-menu-item {
@@ -845,11 +850,6 @@ html.accessibility .tilesmenu-menu .menu-item-button .origbutton .myPtag {
 		}
 	}
 }
-
-@color0: #212121;
-@width1: 100%;
-@height0: 100%;
-@height1: 60px;
 
 .menu-item-button {
 	bottom: 0;
