@@ -7,8 +7,8 @@ define([
     var TileMenuView = MenuView.extend({
 
         events: {
-            'click .firsttileview .menu-header' : 'firstPGlaunch',
-            'click .firsttileview .menu-tile-items' : 'firstPGlaunch'/*,
+            /*'click .firsttileview .menu-header' : 'firstPGlaunch',
+            'click .firsttileview .menu-tile-items' : 'firstPGlaunch',
             'mousemove .tiles-menu-inner .menu-header' : 'accessibilityOn',
             'mousemove .tiles-menu-inner .menu-tile-items' : 'accessibilityOn'*/
         },

@@ -286,118 +286,119 @@
 		-ms-transition: all .2s ease-in-out;
 		-o-transition: all .2s ease-in-out;
 		transition: all .2s ease-in-out;
+	}
 
-		.origbutton {
-			height: 50vh;
-			width: 100%;
-			padding: 0px 10px;
-			margin: 0px;
-			display: flex;
-			flex-flow: row wrap;
-			justify-content: space-around;
-			align-items: center;
-			position: absolute;
-			top: 0px;
-			left: 0px;
-			text-align: left;
-			overflow: hidden;
-			background-color: transparent !important;
+	.origbutton {
+		height: 50vh;
+		width: 100%;
+		padding: 0px 10px;
+		margin: 0px;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-around;
+		align-items: center;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		text-align: left;
+		overflow: hidden;
+		background-color: transparent !important;
+		color: transparent !important;
+
+		.viewtext {
+			text-align: center;
+			font-weight: bold;
+			border: 1px solid;
+			padding: 10px 0px;
 			color: transparent !important;
+			width: 50%;
+			height: 44px;
+			margin: 0px 25%;
+
+			&:focus {
+				background-color: @item-color !important;
+				color: @item-color-inverted !important;
+				cursor: pointer;
+			}
+		}
+
+		/* 
+		#tilemenupopup {
+			color: transparent !important;
+			background-color: transparent !important;
+			text-decoration: none;
+			padding: 10px;
+			display: block;
+			text-align: center;
+			position: relative;
+			margin-top: 10px;
+			outline: none;
+		}
+
+		p {
+			width: 86%;
+			display: none;
+		}
+
+		.myPtag {
+			display: block;
+		}
+
+		&:hover {
+			background-color: @item-color-inverted !important;
+			color: @item-color !important;
+			cursor: default;
+
+
+			&:before {
+				content: 'Click or tap View to start.';
+				display: block;
+				font-size: 15px;
+				font-weight: 700;
+				color: @item-color;
+				font-style: italic;
+				letter-spacing: 1px;
+				text-align: center;
+				width: 100%;
+			}
 
 			.viewtext {
-				text-align: center;
-				font-weight: bold;
-				border: 1px solid;
-				padding: 10px 0px;
-				color: transparent !important;
-				width: 50%;
-				height: 44px;
-				margin: 0px 25%;
+				background-color: @item-color !important;
+				color: @item-color-inverted !important;
+				cursor: pointer;
+			}
 
-				&:focus {
-					background-color: @item-color !important;
-					color: @item-color-inverted !important;
-					cursor: pointer;
-				}
+			.viewtext:hover {
+				background-color: @item-color-inverted !important;
+				color: @item-color !important;
+				cursor: pointer;
 			}
 
 			#tilemenupopup {
-				color: transparent !important;
-				background-color: transparent !important;
-				text-decoration: none;
-				padding: 10px;
-				display: block;
-				text-align: center;
-				position: relative;
-				margin-top: 10px;
-				outline: none;
+				color: @notify-inverted !important;
+				background-color: @notify !important;
+				cursor: pointer;
 			}
 
-			p {
-				width: 86%;
-				display: none;
-			}
-
-			.myPtag {
-				display: block;
-			}
-
-			&:hover {
+			#tilemenupopup:hover {
 				background-color: @item-color-inverted !important;
 				color: @item-color !important;
-				cursor: default;
-
-
-				&:before {
-					content: 'Click or tap View to start.';
-					display: block;
-					font-size: 15px;
-					font-weight: 700;
-					color: @item-color;
-					font-style: italic;
-					letter-spacing: 1px;
-					text-align: center;
-					width: 100%;
-				}
-
-				.viewtext {
-					background-color: @item-color !important;
-					color: @item-color-inverted !important;
-					cursor: pointer;
-				}
-
-				.viewtext:hover {
-					background-color: @item-color-inverted !important;
-					color: @item-color !important;
-					cursor: pointer;
-				}
-
-				#tilemenupopup {
-					color: @notify-inverted !important;
-					background-color: @notify !important;
-					cursor: pointer;
-				}
-
-				#tilemenupopup:hover {
-					background-color: @item-color-inverted !important;
-					color: @item-color !important;
-					cursor: pointer;
-				}
-			}
-
-			&.visited {
-				background-color: @disabled;
-				color: @btn-color-inverted;
-			}
-
-			&.visited:hover {
-				.viewtext {
-					background-color: #808080 !important;
-					color: @item-color-inverted !important;
-					cursor: pointer;
-				}
+				cursor: pointer;
 			}
 		}
+
+		&.visited {
+			background-color: @disabled;
+			color: @btn-color-inverted;
+		}
+
+		&.visited:hover {
+			.viewtext {
+				background-color: #808080 !important;
+				color: @item-color-inverted !important;
+				cursor: pointer;
+			}
+		} */
 	}
 
 	.menu-item-button:before {
@@ -407,7 +408,7 @@
 		width: 10px;
 		height: 25px;
 		display: block;
-		color: @item-color;
+		color: @heading-color;
 		font-size: 32px;
 		font-family: inherit;
 		line-height: 32px;
@@ -540,6 +541,21 @@ html.accessibility .tilesmenu-menu .menu-item-button .origbutton .myPtag {
 	.tilesmenu-menu .menu-header-inner.has-image img.menu-image {
 		max-width: 70% !important;
 	}
+}
+
+@media (max-width: 47.5rem) {
+	.location-menu {
+		overflow-y: auto !important;
+	}
+
+	.nav {
+		z-index: 0 !important;
+	}
+
+	.nav__drawer-btn {
+		float: right !important;
+	}
+
 }
 
 @media all and (max-width:@device-width-medium) {
@@ -776,10 +792,18 @@ html.accessibility .tilesmenu-menu .menu-item-button .origbutton .myPtag {
 		.menu-item-link {
 			display: none;
 		}
+
+		.origbutton {
+			display: block !important;
+		}
 	}
 
 	&:hover {
 		background-color: @color0;
+
+		.origbutton {
+			display: none !important;
+		}
 
 		.menu-item-graphic,
 		.menu-item-duration {

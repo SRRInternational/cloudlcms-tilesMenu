@@ -1,8 +1,8 @@
-<div class="menu-item-inner" style="{{#if _graphic.src}} background: url({{_graphic.src}}); background-size: cover; background-repeat: no-repeat; background-position: center;{{/if}} height: 50vh;" aria-label="{{_globals._menu._tilesmenu.menuItem}}" {{#if _globals._menu._tilesmenu.menuItem}}tabindex="0"{{/if}}>
+<div class="menu-item-inner viewtext" style="{{#if _graphic.src}} background: url({{_graphic.src}}); background-size: cover; background-repeat: no-repeat; background-position: center;{{/if}} height: 50vh;">
     <div class="menu-item-title">
         <div class="menu-item-title-inner h3" role="heading" aria-level="2" tabindex="0">{{#if _tilesMenu._customTitle}}{{{_tilesMenu._customTitle}}}{{else}}{{{compile displayTitle}}}{{/if}}</div>
     </div>
-    <div class="menu-item-button">
+    <div class="menu-item-button" role="region" tabindex="0">
         <a href="#/id/{{_id}}" class="menu-item-link {{#if _isVisited}}visited{{/if}}">
             <div class="menu-item-graphic">
                 <img src="{{_graphic.src}}" alt="{{_graphic.alt}}">
@@ -30,5 +30,10 @@
         <div class="page-level-progress-menu-item-indicator">
             <div class="page-level-progress-menu-item-indicator-bar"></div>
         </div>
+    </div>
+    <div aria-label="View " class="origbutton">
+        <span class="aria-label" tabindex="0">{{{compile_a11y_text body}}}</span>
+        <span class="aria-label" role="region" tabindex="0">Click or tap View to start.</span>
+        <div class="viewtext" tabindex="0" role="button">View</div>
     </div>
 </div>
