@@ -80,7 +80,7 @@
 				height: 100%;
 				text-align: left;
 				text-shadow: none !important;
-				background-color: @background !important;
+				background-color: @background-inverted !important;
 				border: none;
 
 				.menu-title {
@@ -230,16 +230,15 @@
 			bottom: 2px;
 
 			.page-level-progress-menu-item-indicator {
-				border: none;
+				border: 1px solid @progress-border;
 				border-radius: 0px;
 				width: auto;
-				height: 4px;
 				margin: 0px 5px 0px 5px;
-				background-color: @progress;
+				background-color: @progress-inverted;
 
 				.page-level-progress-menu-item-indicator-bar {
 					border-radius: 0px 5px 5px 0px;
-					background-color: @progress-inverted;
+					background-color: @progress;
 					height: 4px;
 				}
 
@@ -263,6 +262,7 @@
 		display: table;
 		vertical-align: middle;
 		height: 70px;
+		color: @heading-color;
 		font-size: 21px !important;
 
 		.menu-item-title-inner {
@@ -279,7 +279,7 @@
 	}
 
 	.menu-item-button {
-		background-color: @color0;
+		background-color: @background-inverted;
 		padding: @menu-header-padding-hoz;
 		-webkit-transition: all .2s ease-in-out;
 		-moz-transition: all .2s ease-in-out;
@@ -316,7 +316,7 @@
 			margin: 0px 25%;
 
 			&:focus {
-				background-color: @item-color !important;
+				background-color: transparent !important;
 				color: @item-color-inverted !important;
 				cursor: pointer;
 			}
@@ -419,7 +419,7 @@
 	.menu-item-duration {
 		display: none;
 		float: none;
-		text-shadow: 0px 0px 2px #ffffff;
+		text-shadow: 0px 0px 2px @shadow-inverted;
 		background-color: rgba(255, 255, 255, 0.7);
 		padding: 4px;
 
@@ -696,7 +696,7 @@ html.accessibility .tilesmenu-menu .menu-item-button .origbutton .myPtag {
 
 				&.visited {
 					.viewtext {
-						background-color: #808080 !important;
+						background-color: @background-inverted !important;
 						color: @item-color-inverted !important;
 						cursor: pointer;
 					}
@@ -772,7 +772,7 @@ html.accessibility .tilesmenu-menu .menu-item-button .origbutton .myPtag {
 	transition: background-color .5s ease-in-out;
 
 	&:before {
-		background-color: @color0;
+		background-color: @btn-color-inverted;
 		bottom: 0;
 		content: "";
 		display: block;
@@ -811,7 +811,7 @@ html.accessibility .tilesmenu-menu .menu-item-button .origbutton .myPtag {
 		}
 
 		.menu-item-button {
-			color: #ffffff;
+			color: @font-color;
 			height: @height0;
 			width: @width1;
 
@@ -823,7 +823,7 @@ html.accessibility .tilesmenu-menu .menu-item-button .origbutton .myPtag {
 			a {
 				display: block;
 				background-color: transparent;
-				color: #fff;
+				color: @font-color;
 				font-size: 0;
 				height: 100%;
 				padding: 0;
@@ -919,7 +919,7 @@ only screen and (min-width: 760px) {
 }
 
 .nav__inner {
-	background-color: @background;
+	background-color: @background-inverted;
 }
 
 /* page level progressbar*/
@@ -935,7 +935,7 @@ only screen and (min-width: 760px) {
 }
 
 .nav .nav__pagelevelprogress-btn {
-	background-color: #fff;
+	background-color: @background-inverted;
 	border: none;
 	height: auto;
 	margin: 0;
@@ -949,7 +949,7 @@ only screen and (min-width: 760px) {
 	width: 100%;
 
 	&:hover {
-		background-color: #fff !important;
+		background-color: @background-inverted !important;
 	}
 }
 
@@ -966,12 +966,12 @@ only screen and (min-width: 760px) {
 .pagelevelprogress__indicator,
 .pagelevelprogress__indicator-inner {
 	width: 100%;
-	border-radius: 0px;
-	height: 15px;
+	border-radius: 1px;
+	border: 1px solid @progress-border;
+    height: auto;
 
 	.pagelevelprogress__indicator-bar {
 		height: 15px;
-		background-color: @nav-progress;
 		-webkit-border-radius: 0 0 0 0;
 		-moz-border-radius: 0 0 0 0;
 		-ms-border-radius: 0 0 0 0;
@@ -996,4 +996,8 @@ only screen and (min-width: 760px) {
 /* drawer */
 .drawer__holder .pagelevelprogress__indicator {
 	width: 20%;
+}
+
+.page,.menu-tile-items {
+    background: @background-inverted;
 }
