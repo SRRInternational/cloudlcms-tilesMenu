@@ -1,16 +1,14 @@
 {
   "name": "adapt-tilesMenu",
-  "version": "5.0.10",
+  "version": "5.0.11",
   "framework": ">=5",
-  "homepage": "https://github.com/mike-st/adapt-tilesmenu",
-  "displayName": "Scrolling Tiles Menu",
+  "homepage": "https://github.com/SRRInternational/cloudlcms-tilesMenu",
+  "issues": "https://github.com/SRRInternational/cloudlcms-tilesMenu/issues/new",
+  "displayName": "CloudLCMS Tiles Menu",
   "menu": "tilesmenu",
-  "description": "A menu with tiles that scroll vertically.",
+  "description": "A verticle tile menu with side course details information",
   "main": "js/adapt-tilesmenu.js",
-  "keywords": [
-    "adapt-plugin",
-    "adapt-menu"
-  ],
+  "keywords": ["adapt-plugin", "adapt-menu"],
   "license": "GPLv3",
   "targetAttribute": "_tilesMenu"
 }
